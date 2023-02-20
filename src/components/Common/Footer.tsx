@@ -14,7 +14,7 @@ const FooterWrapper = styled.div`
 const Footer: FunctionComponent = function () {
   return (
     <FooterWrapper>
-      Thank You for Visiting My Blog😆ㅜㅜ
+      Thank You for Visiting My Blog😆ㅜㅜ죄송
       <br />© 2022 parkblo, Powered By Gatsby.
     </FooterWrapper>
   )
