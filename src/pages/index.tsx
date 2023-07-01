@@ -8,8 +8,13 @@ import PostList from 'components/Main/PostList'
 import { graphql } from 'gatsby'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import { PostListItemType } from 'types/PostItem.types'
+import queryString, { ParsedQuery } from 'query-string'
+
 
 type IndexPageProps = {
+  location: {
+    search: string
+  }
   data: {
     allMarkdownRemark: {
       edges: PostListItemType[]
@@ -35,6 +40,7 @@ const Container = styled.div`
 `
 
 const IndexPage: FunctionComponent<IndexPageProps> = function ({
+  location: { search },
   data: {
     allMarkdownRemark: { edges },
     file: {
